@@ -5,6 +5,7 @@ Project aims to create a Movie App
 Firebase Movie App (folder)
 |
 |----readme.md         
+SOLUTION
 ├── public
 │     └── index.html
 ├── src
@@ -28,6 +29,7 @@ Firebase Movie App (folder)
 │    └── index.css
 ├── package.json
 ├── .env
+
 ## Objective
 Build a Movie App with using React { Context, Router, Hooks } and Firebase for Authentication operations.
 ## Must-Haves
