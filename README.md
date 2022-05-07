@@ -2,33 +2,7 @@
 ## Description
 Project aims to create a Movie App
 ## Project Skeleton
-Firebase Movie App (folder)
-|
-|----readme.md         
-SOLUTION
-├── public
-│     └── index.html
-├── src
-│    ├── auth
-│    │     └── firebase.js
-│    ├── components
-│    │     ├── MovieCard.js
-│    │     └── Navbar.js
-│    ├── context
-│    │     └── AuthContext.js
-│    ├── pages
-│    │     ├── Login.js
-│    │     ├── Register.js
-│    │     ├── Main.js
-│    │     └── MovieDetail.js
-│    ├── router
-│    │     └── Router.js
-│    ├── App.js
-│    ├── App.css
-│    ├── index.js
-│    └── index.css
-├── package.json
-├── .env
+![image](https://user-images.githubusercontent.com/57984491/167230749-b9dc8320-9cde-47d5-b6ea-548eb17214de.png)  
 
 ## Objective
 Build a Movie App with using React { Context, Router, Hooks } and Firebase for Authentication operations.
