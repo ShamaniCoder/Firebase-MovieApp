@@ -5,8 +5,9 @@ const Register = () => {
   const [lastName, setLastName] = useState();
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
-  const handleSubmit = () => {
-    console.log(firstName, lastName, email, password)
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(firstName, lastName, email, password);
   };
   return (
     <div className="d-flex justify-content-center">
@@ -15,7 +16,7 @@ const Register = () => {
       </div>
       <div className="register-form">
         <h1 className="form-title display-3">Register</h1>
-        <form id="register">
+        <form id="register" onSubmit={handleSubmit}>
           <div className="mb-3">
             <label htmlFor="first-name" className="form-label">
               First Name
@@ -26,6 +27,7 @@ const Register = () => {
               id="first-name"
               placeholder="Enter Your First Name"
               onChange={(e) => setFirstName(e.target.value)}
+              required
             />
           </div>
           <div className="mb-3">
@@ -38,6 +40,7 @@ const Register = () => {
               id="last-name"
               placeholder="Enter Your Last Name"
               onChange={(e) => setLastName(e.target.value)}
+              required
             />
           </div>
           <div className="mb-3">
@@ -50,6 +53,7 @@ const Register = () => {
               id="email"
               placeholder="Enter Your E-Mail Address"
               onChange={(e) => setEmail(e.target.value)}
+              required
             />
           </div>
           <div className="mb-3">
@@ -62,13 +66,14 @@ const Register = () => {
               id="password"
               placeholder="Enter Your Password"
               onChange={(e) => setPassword(e.target.value)}
+              required
             />
           </div>
           <input
-            type="button"
-            class="btn btn-primary form-control"
+            type="submit"
+            className="btn btn-primary form-control"
             value="Register"
-            onClick={handleSubmit}
+            // onSubmit={handleSubmit}
           />
         </form>
       </div>
