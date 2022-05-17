@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { logOut } from "../auth/firebase";
-import { AuthContext } from "../context/AuthContext";
+import { Context } from "../context/Context";
 
 const Navbar = () => {
-  const { currentUser } = useContext(AuthContext);
+  const { currentUser } = useContext(Context);
   const navigate = useNavigate();
 
   return (
@@ -14,11 +14,16 @@ const Navbar = () => {
           <Link to={"/"} className="navbar-brand text-white">
             <h4>React Movie App</h4>
           </Link>
-          <div className="d-flex text-white align-items-center">
+          <div className="d-flex text-white align-items-baseline">
             {currentUser ? (
-              <h5 className="mb-0 text-capitalize">
-                {currentUser.displayName}
-              </h5>
+              <>
+                <Link to={"/favorites"} className="navbar-brand text-danger bg-light rounded-pill p-2">
+                  <h4>Favorites</h4>
+                </Link>
+                <h5 className="mb-0 text-capitalize">
+                  {currentUser.displayName}
+                </h5>
+              </>
             ) : (
               <button
                 className="ms-2 btn btn-outline-light"
