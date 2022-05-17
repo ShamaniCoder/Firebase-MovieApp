@@ -45,7 +45,7 @@ const MovieCard = ({
         src={poster_path ? IMG_API + poster_path : defaultImage}
         alt=""
         onClick={() =>
-          currentUser ? navigate("details/" + id) : alert("Please login")
+          currentUser ? navigate("/details/" + id) : alert("Please login")
         }
       />
       <div className="d-flex align-items-center justify-content-between p-1 text-white">
